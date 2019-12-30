@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adresses</title>
+    <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+    <nav th:insert="navbar"></nav>
+    <div class="container">
+        <h1 class="text-center">Les différentes adresses</h1>
+
+        <ul th:each="address: ${allAddresses}">
+            <li th:text="${address.id} + ' - ' + ${address.content}  + ' - crée le : ' + ${address.creation} + ' par : '"></li>
+        </ul>
+    </div>
+</body>
+</html>
